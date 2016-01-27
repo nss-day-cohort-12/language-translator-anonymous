@@ -1,21 +1,34 @@
-// var Translator = (function(trans) {
-//   var frenchLexicon = {};
-
-//   frenchLexicon.french = function () {
-//     merry: "jfowfjf",
-//   };
+var Translator = (function(trans) {
   
-//   return trans;
-// })(Translator);
+  var frenchLexicon = {
+    merry: "joyeux",
+    christmas: "noel",
+    and: "et",
+    happy: "content",
+    new: "neuf",
+    year: "an"
+  };
 
-// {
-// merry: "joyeux",
-// christmas: "noel",
-// and: "et",
-// happy: "content",
-// new: "neuf",
-// year: "an"
-// }
+  trans.toFrench = function (userTextArray) {
+    var icelandicString = "";
+    for (var i = 0; i < testArray2.length; i++) {
+      if (icelandicLexicon[testArray2[i]]) {
+        icelandicString += icelandicLexicon[testArray2[i]];
+        icelandicString += " ";
+      } else {
+        icelandicString += testArray2[i];
+        icelandicString += " ";
+      }
+    };
+    return icelandicString;
+  };
+  
+  return trans;
+})(Translator);
+
+
+
+
 
 
 // var Sedan = (function() {
