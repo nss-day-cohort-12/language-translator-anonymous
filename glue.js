@@ -8,20 +8,8 @@ var Translator = (function() {
     }
   document.getElementById("tranlate_button").addEventListener("click", exicute)
 
-
-	for (var i = 0; i < userTextArray.length; i++) {
-   var word + i
-  };
-
   return {
 
 	}
 })();
 
-
-
-var trial = "merry"
-
-{
-  merry: "frenchstuff"
-}
