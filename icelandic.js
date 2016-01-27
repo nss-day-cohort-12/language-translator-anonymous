@@ -9,29 +9,14 @@ var Translator = (function(trans) {
 		year:"ári"
 	};
 
-// This will be created in glue.js and
-// passed to Translator.toIcelandic.
-	var testArray2 = [
-		"Hello",
-		"I'm",
-		"American",
-		"merry",
-		"christmas",
-		"and",
-		"happy",
-		"new",
-		"year",
-		"sucker"
-	];
-
 	trans.toIcelandic = function (testArray) {
 		var icelandicString = "";
-		for (var i = 0; i < testArray2.length; i++) {
-			if (icelandicLexicon[testArray2[i]]) {
-				icelandicString += icelandicLexicon[testArray2[i]];
+		for (var i = 0; i < testArray.length; i++) {
+			if (icelandicLexicon[testArray[i]]) {
+				icelandicString += icelandicLexicon[testArray[i]];
 				icelandicString += " ";
 			} else {
-				icelandicString += testArray2[i];
+				icelandicString += testArray[i];
 				icelandicString += " ";
 			}
 		};
