@@ -9,42 +9,21 @@ var Translator = (function(trans) {
     year: "an"
   };
 
-  trans.toFrench = function (userTextArray) {
-    var icelandicString = "";
-    for (var i = 0; i < testArray2.length; i++) {
-      if (icelandicLexicon[testArray2[i]]) {
-        icelandicString += icelandicLexicon[testArray2[i]];
-        icelandicString += " ";
+  trans.toFrench = function (input) {
+    var frenchString = "";
+    for (var i = 0; i < input.length; i++) {
+      if (frenchLexicon[input[i]]) {
+        frenchString += frenchLexicon[input[i]];
+        frenchString += " ";
       } else {
-        icelandicString += testArray2[i];
-        icelandicString += " ";
+        frenchString += input[i];
+        frenchString += " ";
       }
     };
-    return icelandicString;
+    return frenchString;
   };
   
   return trans;
 })(Translator);
 
 
-
-
-
-
-// var Sedan = (function() {
-//   var color = "blue";
-//   var type = "sedan";
-
-//   return {
-//     manufacture_date: new Date(),
-//     getColor: function() {
-//       return color;
-//     },
-//     setColor: function(newColor) {
-//       color = newColor;
-//     },
-//     getType: function() {
-//       return type;
-//     }
-//   };
-// })();
