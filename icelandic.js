@@ -9,14 +9,14 @@ var Translator = (function(trans) {
 		year:"ári"
 	};
 
-	trans.toIcelandic = function (testArray) {
+	trans.toIcelandic = function (engWords) {
 		var icelandicString = "";
-		for (var i = 0; i < testArray.length; i++) {
-			if (icelandicLexicon[testArray[i]]) {
-				icelandicString += icelandicLexicon[testArray[i]];
+		for (var i = 0; i < engWords.length; i++) {
+			if (icelandicLexicon[engWords[i]]) {
+				icelandicString += icelandicLexicon[engWords[i]];
 				icelandicString += " ";
 			} else {
-				icelandicString += testArray[i];
+				icelandicString += engWords[i];
 				icelandicString += " ";
 			}
 		};
