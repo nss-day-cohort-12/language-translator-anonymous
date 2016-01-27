@@ -9,8 +9,18 @@ var Translator = (function(trans) {
 		year: "jahr"
 	};
 
-	trans.toGerman = function () {
-		console.log("testing...");
+	trans.toGerman = function (testArray) {
+		var germanString = "";
+		for (var i = 0; i < testArray.length; i++) {
+			if (germanLexicon[testArray[i]]) {
+				germanString += germanLexicon[testArray[i]];
+				germanString += " ";
+			} else {
+				germanString += testArray[i];
+				germanString += " ";
+			}
+		};
+		return germanString;
 	};
 	
 	return trans;
