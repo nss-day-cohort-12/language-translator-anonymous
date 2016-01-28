@@ -19,22 +19,24 @@ var execute = function (){
     document.getElementById("output").innerHTML = input;
   };
 
-
   //*** CHECK DROPDOWN AND RUN TRANSLATE FUNCTION ***//
   if (languageSelected === "French"){
     var finalTranslation = Translator.toFrench(userTextArray);
     console.log("finalTranslation", finalTranslation);
     capFirstLetter(finalTranslation);
+    speakIt(finalTranslation, "fr");
     
   } else if (languageSelected === "German") {
     var finalTranslation = Translator.toGerman(userTextArray);
     console.log("finalTranslation", finalTranslation);
     capFirstLetter(finalTranslation);
+    speakIt(finalTranslation, "de");
 
   } else if (languageSelected === "Icelandic") {
     var finalTranslation = Translator.toIcelandic(userTextArray);
     console.log("finalTranslation", finalTranslation);
     capFirstLetter(finalTranslation);
+    speakIt(finalTranslation, "is");
 
   } else {
     alert("Please Pick a language.")
@@ -50,7 +52,13 @@ var clear = function() {
 }
 document.getElementById("clear").addEventListener("click", clear);
 
-
+// Speech Synthesis
+function speakIt(textString, language) {
+  var talk = new SpeechSynthesisUtterance();
+  talk.lang = language;
+  talk.text = textString;
+  speechSynthesis.speak(talk);
+}
 
 
 
