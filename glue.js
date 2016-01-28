@@ -11,21 +11,30 @@ var execute = function (){
   //*** ACCESS DROPDOWN VALUE ***//
   var languageSelected = document.getElementById("selectLanguage").value
   
+
+  //*** CAPITALIZE FIRST LETTER ***//
+  //*** INSERT INTO DOM ***//
+  var capFirstLetter = function (input) {
+    input = finalTranslation.slice(0,1).toUpperCase() + finalTranslation.slice(1);
+    document.getElementById("output").innerHTML = input;
+  };
+
+
   //*** CHECK DROPDOWN AND RUN TRANSLATE FUNCTION ***//
   if (languageSelected === "French"){
     var finalTranslation = Translator.toFrench(userTextArray);
     console.log("finalTranslation", finalTranslation);
-    document.getElementById("output").innerHTML = finalTranslation;
+    capFirstLetter(finalTranslation);
     
   } else if (languageSelected === "German") {
     var finalTranslation = Translator.toGerman(userTextArray);
     console.log("finalTranslation", finalTranslation);
-    document.getElementById("output").innerHTML = finalTranslation;
+    capFirstLetter(finalTranslation);
 
   } else if (languageSelected === "Icelandic") {
     var finalTranslation = Translator.toIcelandic(userTextArray);
     console.log("finalTranslation", finalTranslation);
-    document.getElementById("output").innerHTML = finalTranslation;
+    capFirstLetter(finalTranslation);
 
   } else {
     alert("Please Pick a language.")
@@ -43,5 +52,5 @@ document.getElementById("clear").addEventListener("click", clear);
 
 
 
-// finalTranslation.slice(0,1).toUpperCase() += finalTranslation.slice(1);
+
 
