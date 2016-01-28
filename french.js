@@ -7,7 +7,7 @@ var Translator = (function(trans) {
     happy: "content",
     new: "neuf",
     year: "an"
-  };
+  }; 
 
   trans.toFrench = function (input) {
     var frenchString = "";
