@@ -20,7 +20,7 @@ var Translator = (function(trans) {
         frenchString += " ";
       }
     };
-    return frenchString;
+    return frenchString; 
   };
   
   return trans;
