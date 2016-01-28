@@ -1,7 +1,7 @@
 var Translator = (function(trans) {
 
 	var icelandicLexicon = {
-		merry:"gleðileg", 
+		merry:"Gleðileg", 
 		christmas:"jól", 
 		and:"og", 
 		happy:"hamingjusamur", 
