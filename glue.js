@@ -5,7 +5,7 @@ var Translator = (function() {
 var execute = function (){
   //*** GET USER INPUT AND CREATE AN ARRAY ***//
   var userText = document.getElementById("textArea").value.toLowerCase();
-  userTextArray = userText.split(" ");
+  var userTextArray = userText.split(" ");
   console.log("User Input", userTextArray);
   
   //*** ACCESS DROPDOWN VALUE ***//
@@ -27,7 +27,7 @@ var execute = function (){
     capFirstLetter(finalTranslation);
     
   } else if (languageSelected === "German") {
-    var finalTranslation = Translator.toGerman(userTextArray);
+    var finalTranslation = Translator.toGerman(userText);
     console.log("finalTranslation", finalTranslation);
     capFirstLetter(finalTranslation);
 
