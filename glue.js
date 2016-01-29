@@ -46,19 +46,34 @@ var execute = function (){
 document.getElementById("tranlate_button").addEventListener("click", execute);
 
 var clear = function() {
-  console.log("anything");
   document.getElementById("textArea").value = "";
   document.getElementById("output").innerHTML = "";
 }
 document.getElementById("clear").addEventListener("click", clear);
 
-// Speech Synthesis
+
+
+
+// Speech Synthesis //
+var talk = new SpeechSynthesisUtterance();
+
 function speakIt(textString, language) {
-  var talk = new SpeechSynthesisUtterance();
   talk.lang = language;
   talk.text = textString;
   speechSynthesis.speak(talk);
 }
 
+// starting volume 0 //
+talk.volume = 0;
 
+// audio button toggle talk.volume between 1 and 0 on checkbox click //
+var btnToggle = function() {
+  if (talk.volume === 0) {
+    talk.volume = 1;
+  } else if (talk.volume === 1){
+    talk.volume = 0;
+  };
+  console.log("this feature was my main contribution. ¯\\_(ツ)_/¯ ");
+};
 
+document.getElementById("cbox").addEventListener("click", btnToggle);
