@@ -73,33 +73,7 @@ var btnToggle = function() {
   } else if (talk.volume === 1){
     talk.volume = 0;
   };
-  console.log("the translate audio toggle was my only real contribution. -Ben");
+  console.log("this feature was my main contribution. ¯\\_(ツ)_/¯ ");
 };
 
-// event listner to fire btnToggle on click
 document.getElementById("cbox").addEventListener("click", btnToggle);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
